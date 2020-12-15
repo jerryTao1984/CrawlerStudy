@@ -12,3 +12,8 @@ class FileUtil(object):
     def saveJsonToFile(self,fileName, jsonResult):
         with open(fileName, 'a', encoding='utf-8') as fp:
             json.dump(jsonResult, fp=fp, ensure_ascii=False)
+
+
+    def saveBToFile(self, fileName, result):
+        with open(fileName, 'wb') as fp:
+            fp.write(result)
