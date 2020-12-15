@@ -19,6 +19,6 @@ if __name__ == '__main__':
     #with open('./kw.json','w',encoding='utf-8') as fp:
     #    json.dump(jsonResponse,fp=fp,ensure_ascii=False)
 
-   # fy=jsonResponse['data']
-   # for item in fy:
-    #    print(item['k'],item['v'])
+    fy=jsonResponse['data']
+    for item in fy:
+        print(item['k'],item['v'])
