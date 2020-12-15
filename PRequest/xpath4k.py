@@ -22,7 +22,9 @@ if __name__ == '__main__':
     for li in li_4k:
         src=li.xpath('.//a/img/@src')[0]#.表示当前指向的
         src='http://pic.netbian.com/'+src
-        sname = li.xpath('.//a/img/@alt')[0]+'.jpg'  # .表示当前指向的
-        sname=sname.encode('iso-8859-1').decode('gb2312')
-        bimgdata=requests.get(url=src,headers=header).content
-        ruhnnFileU.saveBToFile(dirname+'/'+sname,bimgdata)
+        sname = li.xpath('.//a/img/@alt')[0] + '.jpg'  # .表示当前指向的
+        sname = sname.encode('iso-8859-1').decode('gb2312')
+        ruhnnFileU.downLoadToFile(src,dirname+'/'+sname)
+
+        # bimgdata=requests.get(url=src,headers=header).content
+        # ruhnnFileU.saveBToFile(dirname+'/'+sname,bimgdata)
